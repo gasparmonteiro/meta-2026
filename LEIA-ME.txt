@@ -1,0 +1,23 @@
+CONSULTA ELEITORAL 2022/2026
+Projeto independente para consulta offline.
+
+Tela inicial:
+- 142 municípios
+- Lula 2022
+- Barranco 2022
+- Meta Barranco 2026
+- ranking inicial por votação de Barranco
+
+Detalhamento:
+- Município > Bairro > Local de votação > Seção
+- alternância entre Barranco 2022 e Lula 2022
+- funciona offline após a primeira carga/instalação
+
+Publicação:
+1. Crie um NOVO repositório público no GitHub.
+2. Envie os arquivos desta pasta para a raiz.
+3. Settings > Pages > Deploy from a branch > main > /(root).
+4. Abra o endereço publicado no Safari.
+5. Compartilhar > Adicionar à Tela de Início.
+
+VERSÃO 2 CORRIGIDA: dados incorporados ao index.html para garantir a abertura local e offline.
