@@ -1,0 +1,4 @@
+Fórmula B_2026 - META: OK
+Fórmula antiga removida: OK
+Positivo/zero verde: OK
+Negativo vermelho: OK

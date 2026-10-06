@@ -27,7 +27,7 @@
 .empty{text-align:center;padding:30px;color:#777}@media(max-width:600px){.head,.row{grid-template-columns:25px minmax(92px,1.3fr) .72fr .72fr .72fr .72fr 14px;gap:5px}.head{font-size:9px}.mun{font-size:13px}.num{font-size:14px}.content{padding:10px}.kpi strong{font-size:16px}.item{grid-template-columns:24px minmax(105px,1.25fr) .9fr 42px 54px;padding:14px 10px}.votes{font-size:18px}}
 
 .dualhead{display:grid;grid-template-columns:minmax(180px,1fr) 75px 75px 90px;gap:8px;padding:4px 14px 6px 50px;font-size:11px;font-weight:800;color:#66706c;text-align:right}.item.dual{grid-template-columns:28px minmax(150px,1fr) 75px 75px 90px}.votePair{text-align:right;font-weight:900;font-size:18px}.votePair.lula{color:#245b46}.votePair.barranco{color:#174f3c}.dualLocal{grid-template-columns:minmax(180px,1fr) 75px 75px 90px}.sec.dualSec,.sec.secHead{grid-template-columns:minmax(150px,1fr) 60px 60px 75px;text-align:right}.sec.dualSec span:first-child,.sec.secHead span:first-child{text-align:left}.sec.secHead{font-size:10px;font-weight:800;color:#777}.tabs,.bar,.pct{display:none!important}@media(max-width:600px){.dualhead{grid-template-columns:minmax(120px,1fr) 52px 52px 62px;padding-left:42px;font-size:9px}.item.dual{grid-template-columns:24px minmax(105px,1fr) 52px 52px 62px}.dualLocal{grid-template-columns:minmax(120px,1fr) 52px 52px 62px}.votePair{font-size:15px}.sec.dualSec,.sec.secHead{grid-template-columns:minmax(115px,1fr) 44px 44px 55px}}
-</style></head><body><div class="app">
+.diffPos{color:#2f7d60!important}.diffNeg{color:#c62828!important}</style></head><body><div class="app">
 <header class="top"><button id="back" class="back" style="display:none">‹ Voltar</button><h1 id="title">Consulta Eleitoral 2022/2026</h1><small id="subtitle">Mato Grosso • consulta offline</small></header>
 <main class="content"><div id="offline" class="off">Sem internet — consulta funcionando com os dados armazenados no iPhone.</div><div id="view"></div></main></div>
 <script>
@@ -49,7 +49,7 @@ function renderList(q){
  const f=DADOS.filter(m=>norm(m.name).includes(norm(q)));
  document.getElementById('lista').innerHTML=f.map((m,i)=>`<div class="row" data-name="${m.name.replace(/"/g,'&quot;')}">
  <div class="rank">${i+1}</div><div class="mun">${m.name}</div><div><div class="num">${fmt(m.l2026||0)}</div></div>
- <div><div class="num">${fmt(m.barranco)}</div></div><div><div class="num">${fmt(m.b2026||0)}</div></div><div><div class="num">${fmt(m.meta)}</div><div class="sub">${m.meta>=m.barranco?'+':''}${fmt(m.meta-m.barranco)}</div></div><div class="arrow">›</div></div>`).join('')||'<div class="empty">Município não encontrado.</div>';
+ <div><div class="num">${fmt(m.barranco)}</div></div><div><div class="num">${fmt(m.b2026||0)}</div></div><div><div class="num">${fmt(m.meta)}</div><div class="sub ${((m.b2026||0)-m.meta)>=0?'diffPos':'diffNeg'}">${((m.b2026||0)-m.meta)>0?'+':''}${fmt((m.b2026||0)-m.meta)}</div></div><div class="arrow">›</div></div>`).join('')||'<div class="empty">Município não encontrado.</div>';
  document.querySelectorAll('.row').forEach(el=>el.onclick=()=>openMun(el.dataset.name));
 }
 function openMun(name){
