@@ -1,0 +1,6 @@
+tela inicial L_2026: OK
+tela inicial B_2026: OK
+bairro 3 colunas: OK
+secao 3 colunas: OK
+municipio usa L2026: OK
+municipio usa B2026: OK

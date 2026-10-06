@@ -1,0 +1,7 @@
+Total L_2026 (Lula nº 13, Presidente): 581681
+Total L_2026 incorporado nos municípios: 581681
+Municípios: 142
+Bairros com L_2026 > 0: 861
+Locais com L_2026 > 0: 1381
+Seções com L_2026 > 0: 7064
+Ordem visual solicitada: L_2026 > B_2022 > B_2026

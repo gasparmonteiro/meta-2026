@@ -1,4 +1,4 @@
-const CACHE='consulta-eleitoral-2022-2026-v2-corrigida';
+const CACHE='consulta-eleitoral-2026-v6-corrigida';
 const FILES=['./','./index.html','./data.js','./manifest.webmanifest','./icon-180.png','./icon-512.png'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)))});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
