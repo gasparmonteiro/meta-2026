@@ -1,0 +1,21 @@
+V08 - CORREÇÃO TERRITORIAL B_2026
+Fonte: BU 2026 + cadastro de locais 2026
+Candidato: Valdir Barranco 13123 - Deputado Estadual
+Regra: seção -> local 2026 -> bairro 2026 -> município
+Total estadual B_2026: 32.137
+Municípios auditados: 142
+Divergências entre município, bairros, locais e seções: 0
+
+DIAMANTINO - B_2026: 212
+BOJUÍ: 25
+NOVO DIAMANTINO: 61
+BURITI: 9
+CENTRO: 33
+JARDIM ALVORADA: 12
+BAIRRO DA PONTE: 16
+CAETÉ: 17
+POPINO: 8
+DECIOLÂNDIA: 2
+COHAB MORUMBI: 10
+PEDREGAL: 18
+POSTO GIL: 1
